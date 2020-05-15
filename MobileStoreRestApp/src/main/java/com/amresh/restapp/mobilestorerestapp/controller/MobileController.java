@@ -22,13 +22,13 @@ public class MobileController {
 
 	@PostMapping("/addMobile")
 	public String addMobile(@RequestBody Mobiles mobile) {
-		service.save(mobile);
+		service.saveMobiles(mobile);
 		return "Mobile Added Successfully";
 	}
 
 	@GetMapping("/getAll")
 	public List<Mobiles> getAllMobiles() {
-		return service.findAll();
+		return service.findAllMobiles();
 	}
 
 	@GetMapping("/{modelName}")

@@ -12,12 +12,12 @@ public class MobileService {
 	@Autowired
 	MobileRepository repository;
 
-	public void save(Mobiles mobile) {
+	public void saveMobiles(Mobiles mobile) {
 		repository.save(mobile);
 
 	}
 
-	public List<Mobiles> findAll() {
+	public List<Mobiles> findAllMobiles() {
 		return repository.findAll();
 	}
 
