@@ -17,9 +17,9 @@ public class Mobiles {
 	private long batteryCapacity;
 	private String colour;
 	
-	public Mobiles(String brandName, String modelName, int ramInGB, int memoryInGB, String processor,
+	public Mobiles(int id,String brandName, String modelName, int ramInGB, int memoryInGB, String processor,
 			float displayInInches, String os, long batteryCapacity, String colour) {
-		
+		this.id=id;
 		this.brandName = brandName;
 		this.modelName = modelName;
 		this.ramInGB = ramInGB;
