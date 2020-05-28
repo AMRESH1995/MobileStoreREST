@@ -57,25 +57,25 @@ public class MobileStoreRestAppApplicationTests {
 		return objectMapper.writeValueAsString(obj);
 	}
 
-	protected <T> T mapFromJson(String json, Class<T> clazz)
+	protected <T> T mapFromJson(String json, Class<T> c)
 			throws JsonParseException, JsonMappingException, IOException {
 
 		ObjectMapper objectMapper = new ObjectMapper();
-		return objectMapper.readValue(json, clazz);
+		return objectMapper.readValue(json, c);
 	}
 
 	@Test
 	public void getAllMobilesDetails() {
 		int id = 5;
-		String brandName = "testBrand";
-		String modelName = "testName";
+		String brandName = "Samsung";
+		String modelName = "M20";
 		int ramInGB = 4;
 		int memoryInGB = 64;
-		String processor = "testProcessor";
+		String processor = "Snapdragon720";
 		float displayInInches = 5.5f;
-		String os = "testOs";
+		String os = "Android";
 		long batteryCapacity = 3000;
-		String colour = "testColour";
+		String colour = "Black";
 
 		List<Mobiles> mobileList = new ArrayList<>();
 		Mockito.when(mobileService.findAllMobiles()).thenReturn(mobileList);

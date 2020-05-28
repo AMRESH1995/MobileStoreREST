@@ -25,4 +25,6 @@ public class MobileService {
 		return repository.findByModelName(modelName);
 	}
 
+	
+
 }
